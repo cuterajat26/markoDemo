@@ -1,0 +1,26 @@
+<lasso-page package-path="./browser.json"/>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Marko Demo</title>
+    <lasso-head/>
+</head>
+<body>
+<h1>Marko Demo</h1>
+
+Hello ${data.name}
+
+<ul if="notEmpty(data.colors)">
+
+    <li for="color in data.colors">
+        $color
+    </li>
+</ul>
+
+<div else>
+    There are no colors
+</div>
+<lasso-body/>
+</body>
+</html>

@@ -1,0 +1,18 @@
+$rmod.main("/marko@2.8.4", "runtime/marko-runtime");
+$rmod.dep("", "marko", "2.8.4");
+$rmod.main("/async-writer@1.4.1", "lib/async-writer");
+$rmod.dep("/$/marko", "async-writer", "1.4.1");
+$rmod.main("/process@0.6.0", "index");
+$rmod.dep("", "process", "0.6.0");
+$rmod.remap("/process@0.6.0/index", "browser");
+$rmod.main("/events@1.1.0", "events");
+$rmod.dep("/$/marko", "events", "1.1.0");
+$rmod.dep("/$/marko", "raptor-util", "1.0.10");
+$rmod.main("/marko@2.8.4/runtime", "marko-runtime");
+$rmod.main("/raptor-logging@1.0.8", "lib/index");
+$rmod.dep("/$/marko", "raptor-logging", "1.0.8");
+$rmod.dep("/$/marko", "raptor-polyfill", "1.0.2");
+$rmod.main("/raptor-stacktraces@1.0.1", "lib/raptor-stacktraces");
+$rmod.dep("/$/marko/$/raptor-logging", "raptor-stacktraces", "1.0.1");
+$rmod.remap("/raptor-logging@1.0.8/lib/resolveLoggerName", "resolveLoggerName-browser");
+$rmod.remap("/marko@2.8.4/runtime/loader", "loader_browser");

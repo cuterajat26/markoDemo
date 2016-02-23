@@ -1,0 +1,1 @@
+$rmod.run("/src/pages/home/client");
